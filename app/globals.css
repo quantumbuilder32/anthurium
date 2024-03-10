@@ -1,0 +1,85 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+
+:root {
+    --primaryColor: pink;
+    --secondaryColor: blue;
+    --tertiaryColor: #952e2e;
+    --backgroundColor: #B03737;
+
+
+    --largeFontSize: 2rem;
+    --mediumFontSize: 1.3rem;
+}
+
+
+.noScrollBar::-webkit-scrollbar {
+    display: none;
+}
+
+*,
+*::before,
+*::after {
+    border: 1px solid red !important;
+}
+
+*::-webkit-scrollbar-thumb {
+    background-color: var(--backgroundColor);
+}
+
+*::-webkit-scrollbar {
+    height: .2rem;
+    width: .2rem;
+}
+
+*::-webkit-scrollbar-track {
+    background-color: #ffffff;
+
+}
+
+h1 {
+    font-weight: bold;
+    font-size: var(--largeFontSize);
+}
+
+h2 {
+    font-size: var(--mediumFontSize);
+}
+
+h3 {
+    font-weight: bold;
+}
+
+svg {
+    width: 1rem;
+    aspect-ratio: 1/1;
+}
+
+
+button {
+    background-color: var(--tertiaryColor);
+    padding: 1rem 2rem;
+    transition: filter 400ms;
+    color: #ffffff;
+}
+
+button:hover {
+    filter: brightness(.7);
+}
+
+.secondaryButton {
+    background-color: #fff;
+    border: 1px solid #000;
+    color: #000
+}
+
+section {
+    padding: 2rem 1rem;
+}
+
+.highlight {
+    color: var(--backgroundColor)
+}
