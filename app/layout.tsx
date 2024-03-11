@@ -1,9 +1,10 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Rubik } from "next/font/google";
 import "./globals.css";
 import Nav from "@/components/nav/Nav";
+import TopSection from "@/components/topSection/TopSection";
 
-const inter = Inter({ subsets: ["latin"] });
+const rubik = Rubik({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Anthurium Software Solutions",
@@ -18,7 +19,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>
+      <body className={rubik.className}>
+        <TopSection />
+
         <Nav menuInfoArr={[
           {
             title: "Home",

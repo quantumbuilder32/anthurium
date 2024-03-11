@@ -5,10 +5,10 @@
 
 
 :root {
-    --primaryColor: pink;
+    --primaryColor: rgba(0, 107, 237, 0.79);
     --secondaryColor: blue;
     --tertiaryColor: #952e2e;
-    --backgroundColor: #B03737;
+    --backgroundColor: #252628;
 
 
     --largeFontSize: 2rem;
@@ -16,6 +16,8 @@
 }
 
 
+
+/* element styels */
 .noScrollBar::-webkit-scrollbar {
     display: none;
 }
@@ -23,7 +25,7 @@
 *,
 *::before,
 *::after {
-    border: 1px solid red !important;
+    /* border: 1px solid red !important; */
 }
 
 *::-webkit-scrollbar-thumb {
@@ -56,30 +58,53 @@ h3 {
 svg {
     width: 1rem;
     aspect-ratio: 1/1;
+    transition: scale 600ms;
+}
+
+svg:hover {
+    scale: 1.1
 }
 
 
 button {
-    background-color: var(--tertiaryColor);
+    background-color: var(--primaryColor);
+    border-radius: .2rem;
+    text-transform: capitalize;
+    color: #fff;
     padding: 1rem 2rem;
-    transition: filter 400ms;
-    color: #ffffff;
 }
 
-button:hover {
-    filter: brightness(.7);
-}
+button:hover {}
 
-.secondaryButton {
-    background-color: #fff;
-    border: 1px solid #000;
-    color: #000
-}
+.secondaryButton {}
 
 section {
     padding: 2rem 1rem;
 }
 
+
+/* custom styels */
+
+
 .highlight {
     color: var(--backgroundColor)
+}
+
+
+.noDisplay {
+    display: none;
+}
+
+.fadeIn {
+    animation: fadeIn 1s both;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
 }

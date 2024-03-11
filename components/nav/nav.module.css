@@ -6,8 +6,8 @@
 }
 
 .mainNav {
-    background-color: var(--backgroundColor);
-    color: #fff;
+    background-color: #fff;
+    color: #000;
     padding: 0rem 1rem;
     position: relative;
     top: 0;
@@ -32,7 +32,7 @@
 
 .mainNav svg {
     aspect-ratio: 1/1;
-    fill: #fff;
+    transition: rotate 400ms;
 }
 
 .mainMenu {
@@ -40,7 +40,7 @@
     justify-content: center;
     grid-auto-flow: column;
     white-space: nowrap;
-    background-color: var(--backgroundColor);
+    background-color: #fff;
 }
 
 .mainMenuItem {
@@ -66,7 +66,7 @@
     display: none;
     position: absolute;
     left: 0;
-    background-color: var(--backgroundColor);
+    background-color: #fff;
 }
 
 .subMenuItem {
@@ -91,7 +91,7 @@
     top: 0;
     right: 0;
     translate: 100% 0;
-    background-color: var(--backgroundColor);
+    background-color: #fff;
 }
 
 .subSubMenuItem {

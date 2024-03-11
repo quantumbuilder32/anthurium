@@ -25,7 +25,8 @@ type subSubMenuItem = {
 export default function MainNav({ menuInfoArr }: { menuInfoArr: menuItem[] }) {
     return (
         <nav className={styles.mainNav}>
-            <Image height={100} width={100} alt='logo' src={require("@/public/logo1.png").default.src} style={{ objectFit: "contain" }} />
+            <div style={{ fontSize: "clamp(1rem, 2.5vw,3rem)" }}><p>Anthur<span style={{ color: "var(--primaryColor)" }}>ium</span></p></div>
+            {/* <Image height={100} width={100} alt='logo' src={require("@/public/logo1.png").default.src} style={{ objectFit: "contain" }} /> */}
 
             <DesktopNav menuInfoArr={menuInfoArr} />
             <MobileNav menuInfoArr={menuInfoArr} />
@@ -87,7 +88,7 @@ function MobileNav({ menuInfoArr }: { menuInfoArr: menuItem[] }) {
 
     return (
         <div className={styles.mobileMenu}>
-            <svg onClick={() => showingMenuSet(prev => !prev)} style={{ margin: "0 auto" }} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M0 96C0 78.3 14.3 64 32 64H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32s14.3-32 32-32H416c17.7 0 32 14.3 32 32z" /></svg>
+            <svg onClick={() => showingMenuSet(prev => !prev)} style={{ margin: "0 auto", width: "2rem" }} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M0 96C0 78.3 14.3 64 32 64H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32s14.3-32 32-32H416c17.7 0 32 14.3 32 32z" /></svg>
 
             {showingMenu && (
                 <ul className={`${styles.mainMenu} noScrollBar`}>
@@ -111,7 +112,7 @@ function MenuItem({ seenMenuItem, seenSubMenuArr }: { seenMenuItem: menuItem, se
                 <Link style={{ color: pathname === seenMenuItem.link ? "var(--primaryColor)" : "" }} href={seenMenuItem.link}>{seenMenuItem.title}</Link>
 
                 {seenSubMenuArr !== undefined && (
-                    <svg style={{ width: ".7rem", fill: pathname === seenMenuItem.link ? "var(--primaryColor)" : "" }} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M233.4 406.6c12.5 12.5 32.8 12.5 45.3 0l192-192c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L256 338.7 86.6 169.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l192 192z" /></svg>
+                    <svg style={{ width: ".7rem", fill: pathname === seenMenuItem.link ? "var(--primaryColor)" : "", rotate: showingSubMenu ? "180deg" : "" }} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M233.4 406.6c12.5 12.5 32.8 12.5 45.3 0l192-192c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L256 338.7 86.6 169.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l192 192z" /></svg>
                 )}
             </div>
 
@@ -134,7 +135,7 @@ function SubMenuItem({ seenSubMenuItem, seenSubSubMenuArr }: { seenSubMenuItem: 
                 <Link style={{ color: pathname === seenSubMenuItem.link ? "var(--primaryColor)" : "" }} href={seenSubMenuItem.link}>{seenSubMenuItem.title}</Link>
 
                 {seenSubSubMenuArr !== undefined && (
-                    <svg style={{ width: ".7rem", color: pathname === seenSubMenuItem.link ? "var(--primaryColor)" : "" }} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M233.4 406.6c12.5 12.5 32.8 12.5 45.3 0l192-192c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L256 338.7 86.6 169.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l192 192z" /></svg>
+                    <svg style={{ width: ".7rem", color: pathname === seenSubMenuItem.link ? "var(--primaryColor)" : "", rotate: showingSubSubMenu ? "180deg" : "" }} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M233.4 406.6c12.5 12.5 32.8 12.5 45.3 0l192-192c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L256 338.7 86.6 169.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l192 192z" /></svg>
                 )}
             </div>
 
