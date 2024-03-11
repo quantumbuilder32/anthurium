@@ -31,7 +31,7 @@ export default function MainNav({ menuInfoArr }: { menuInfoArr: menuItem[] }) {
             <DesktopNav menuInfoArr={menuInfoArr} />
             <MobileNav menuInfoArr={menuInfoArr} />
 
-            <button>Get Started</button>
+            <button className='mainButton'>Get Started</button>
         </nav>
     )
 }

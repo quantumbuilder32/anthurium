@@ -66,17 +66,41 @@ svg:hover {
 }
 
 
-button {
+.mainButton {
     background-color: var(--primaryColor);
     border-radius: .2rem;
     text-transform: capitalize;
     color: #fff;
     padding: 1rem 2rem;
+    transition: filter 400ms;
 }
 
-button:hover {}
+.mainButton:hover {
+    filter: brightness(.8);
+}
 
-.secondaryButton {}
+.secondaryButton {
+    background-color: rgba(0, 0, 0, 0.4);
+    border-radius: .2rem;
+    text-transform: capitalize;
+    color: #fff;
+    padding: 1rem 2rem;
+    transition: background-color 400ms, color 400ms;
+
+}
+
+.secondaryButton>svg {
+    fill: #fff
+}
+
+.secondaryButton:hover {
+    background-color: #fff;
+    color: #000;
+}
+
+.secondaryButton:hover>svg {
+    fill: #000
+}
 
 section {
     padding: 2rem 1rem;
@@ -107,4 +131,40 @@ section {
     100% {
         opacity: 1;
     }
+}
+
+.slideInCont {
+    overflow: hidden;
+}
+
+.slideIn {
+    position: relative;
+    animation: slideIn 1s both;
+    transform-origin: bottom left;
+}
+
+@keyframes slideIn {
+    0% {
+        translate: 0 100%;
+    }
+
+    100% {
+        translate: 0 0%;
+    }
+}
+
+.supportingTitle1 {
+    text-transform: uppercase;
+    position: relative;
+    justify-self: flex-start;
+}
+
+.supportingTitle1::before {
+    content: "";
+    position: absolute;
+    top: -0.5rem;
+    left: 0;
+    width: 100%;
+    border-top: solid 2px #fff;
+    text-transform: uppercase;
 }
