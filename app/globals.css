@@ -109,9 +109,14 @@ section {
 
 /* custom styels */
 
+.resizeSvg>svg {
+    width: 100%;
+    aspect-ratio: 1/1;
+}
+
 
 .highlight {
-    color: var(--backgroundColor)
+    color: var(--primaryColor)
 }
 
 
@@ -168,4 +173,25 @@ section {
     width: 100%;
     border-top: solid 2px #fff;
     text-transform: uppercase;
+}
+
+.supportingTitle2 {
+    text-transform: uppercase;
+    position: relative;
+    color: var(--primaryColor);
+    font-weight: bold;
+    display: flex;
+    gap: .5rem;
+}
+
+.supportingTitle2::before {
+    content: "//";
+}
+
+.snap {
+    scroll-snap-type: x mandatory;
+}
+
+.snap>* {
+    scroll-snap-align: start;
 }
