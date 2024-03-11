@@ -51,7 +51,7 @@ export default function Home() {
               <div style={{ position: "absolute", top: 0, left: 0, right: 0, bottom: 0, backgroundColor: "rgba(0,0,0,0.6  )" }}></div>
 
               <div style={{ display: "grid", gap: "1rem", position: "relative" }}>
-                <div className='slideInCont'>
+                <div className='slideInCont' style={{ display: "grid", paddingBlock: "1rem" }}>
                   <p className='supportingTitle1 slideIn'>{eachItem.supportingTitle}</p>
                 </div>
 
