@@ -120,7 +120,7 @@ section {
 }
 
 .fadeIn {
-    animation: fadeIn 1s both;
+    animation: fadeIn calc(var(--fadeTime, 1s)) both;
 }
 
 @keyframes fadeIn {
@@ -152,6 +152,7 @@ section {
         translate: 0 0%;
     }
 }
+
 
 .supportingTitle1 {
     text-transform: uppercase;

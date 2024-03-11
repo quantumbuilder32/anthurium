@@ -6,7 +6,7 @@ import React from 'react'
 export default function Home() {
   return (
     <main>
-      <ImageCarousel style={{ backgroundColor: "green" }} childEls={[
+      <ImageCarousel style={{ backgroundColor: "#000" }} childEls={[
         {
           supportingTitle: "Next-Gen Web Solutions",
           Heading: "Next.js Web Development",
@@ -46,14 +46,12 @@ export default function Home() {
         .map((eachItem, eachItemIndex) => {
           return (
             <div key={eachItemIndex} style={{ padding: "5rem 1rem", color: "#fff", position: "relative" }}>
-              <Image alt={`${eachItem.Heading}'s image`} src={eachItem.image} priority={true} width={1920} height={1920} style={{ objectFit: "cover", position: "absolute", top: 0, left: 0, width: "100%", height: "100%" }} />
+              <Image alt={`${eachItem.Heading}'s image`} src={eachItem.image} priority={true} width={1920} height={1920} style={{ objectFit: "cover", position: "absolute", top: 0, left: 0, width: "100%", height: "100%" } as React.CSSProperties} />
 
               <div style={{ position: "absolute", top: 0, left: 0, right: 0, bottom: 0, backgroundColor: "rgba(0,0,0,0.6  )" }}></div>
 
               <div style={{ display: "grid", gap: "1rem", position: "relative" }}>
-                <div className='slideInCont' style={{ display: "grid", paddingBlock: "1rem" }}>
-                  <p className='supportingTitle1 slideIn'>{eachItem.supportingTitle}</p>
-                </div>
+                <p className='supportingTitle1 slideIn'>{eachItem.supportingTitle}</p>
 
 
                 <div className='slideInCont'>
@@ -61,12 +59,12 @@ export default function Home() {
                 </div>
 
                 <div className='slideInCont'>
-                  <p className='slideIn' style={{ maxWidth: "50ch", animationDelay: "250ms" }}>{eachItem.summary}</p>
+                  <p className='slideIn' style={{ maxWidth: "50ch", animationDelay: "400ms" }}>{eachItem.summary}</p>
                 </div>
 
 
                 <div className='slideInCont'>
-                  <Link className='slideIn' href={""} style={{ justifySelf: "flex-start", display: "inline-block", animationDelay: "400ms" }}>
+                  <Link className='slideIn' href={""} style={{ justifySelf: "flex-start", display: "inline-block", animationDelay: "600ms" }}>
                     <button className='mainButton'>{eachItem.buttonText}</button>
                   </Link>
                 </div>

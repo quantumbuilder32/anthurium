@@ -26,42 +26,42 @@ export default function RootLayout({
           {
             title: "Home",
             link: "/",
-            subMenu: [{ link: "", title: "sup", subSubMenu: [{ link: "", title: "yaya" }] }]
+            // subMenu: [{ link: "", title: "sup", subSubMenu: [{ link: "", title: "yaya" }] }]
           },
           {
             title: "Services",
             link: "/services",
-            subMenu: [{ link: "", title: "sup", subSubMenu: [{ link: "", title: "yaya" }] }]
+            // subMenu: [{ link: "", title: "sup", subSubMenu: [{ link: "", title: "yaya" }] }]
 
           }, {
             title: "Testimonials",
             link: "/testimonials",
-            subMenu: [{ link: "", title: "sup", subSubMenu: [{ link: "", title: "yaya" }] }]
+            // subMenu: [{ link: "", title: "sup", subSubMenu: [{ link: "", title: "yaya" }] }]
 
 
           },
           {
             title: "Blog",
             link: "/blog",
-            subMenu: [{ link: "", title: "sup", subSubMenu: [{ link: "", title: "yaya" }] }]
+            // subMenu: [{ link: "", title: "sup", subSubMenu: [{ link: "", title: "yaya" }] }]
 
           },
           {
             title: "Portfolio",
             link: "/Portfolio",
-            subMenu: [{ link: "", title: "sup", subSubMenu: [{ link: "", title: "yaya" }] }]
+            // subMenu: [{ link: "", title: "sup", subSubMenu: [{ link: "", title: "yaya" }] }]
 
           },
           {
             title: "FAQ",
             link: "/FAQ",
-            subMenu: [{ link: "", title: "sup", subSubMenu: [{ link: "", title: "yaya" }] }]
+            // subMenu: [{ link: "", title: "sup", subSubMenu: [{ link: "", title: "yaya" }] }]
 
           },
           {
             title: "Contact",
             link: "/contact",
-            subMenu: [{ link: "", title: "sup", subSubMenu: [{ link: "", title: "yaya" }] }]
+            // subMenu: [{ link: "", title: "sup", subSubMenu: [{ link: "", title: "yaya" }] }]
 
           },
         ]}
