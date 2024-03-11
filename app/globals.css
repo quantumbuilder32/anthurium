@@ -6,7 +6,7 @@
 
 :root {
     --primaryColor: rgba(0, 107, 237, 0.79);
-    --secondaryColor: blue;
+    --secondaryColor: #F4F7FC;
     --tertiaryColor: #952e2e;
     --backgroundColor: #252628;
 
@@ -49,6 +49,7 @@ h1 {
 
 h2 {
     font-size: var(--mediumFontSize);
+    font-weight: bold;
 }
 
 h3 {
@@ -102,9 +103,49 @@ svg:hover {
     fill: #000
 }
 
+
+.thirdButton {
+    text-transform: capitalize;
+    background-color: var(--secondaryColor);
+    color: #000;
+    font-weight: bold;
+    display: flex;
+    gap: 1rem;
+    justify-content: space-between;
+    align-items: center;
+    overflow: hidden;
+    padding-left: 1rem;
+    transition: background-color 400ms, color 400ms;
+
+}
+
+
+.thirdButton svg {
+    fill: #fff
+}
+
+.thirdButton>div {
+    background-color: var(--primaryColor);
+    transition: background-color 400ms;
+}
+
+.thirdButton:hover>div {
+    background-color: #000
+}
+
+
+.thirdButton:hover {
+    background-color: var(--primaryColor);
+    color: #fff;
+}
+
+
+
 section {
     padding: 2rem 1rem;
 }
+
+
 
 
 /* custom styels */

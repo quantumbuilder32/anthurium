@@ -3,4 +3,4 @@ import styles from "./styles.module.css"
 
 
 //image
-<Image alt={`${1}image`} src={require(`@/public`).default.src} height={400} width={400} style={{ objectFit: "contain" }} />
+<Image alt={`${1}'s image`} src={require(`@/public`).default.src} height={400} width={400} style={{ objectFit: "contain" }} />
