@@ -3,6 +3,7 @@ import { Rubik } from "next/font/google";
 import "./globals.css";
 import Nav from "@/components/nav/Nav";
 import TopSection from "@/components/topSection/TopSection";
+import { servicesData } from "@/lib/servicesData";
 
 const rubik = Rubik({ subsets: ["latin"] });
 
@@ -31,8 +32,9 @@ export default function RootLayout({
           {
             title: "Services",
             link: "/services",
-            // subMenu: [{ link: "", title: "sup", subSubMenu: [{ link: "", title: "yaya" }] }]
-
+            subMenu: servicesData.map(eachService => {
+              return { link: eachService.link, title: eachService.name }
+            })
           }, {
             title: "Testimonials",
             link: "/testimonials",
@@ -48,7 +50,7 @@ export default function RootLayout({
           },
           {
             title: "Portfolio",
-            link: "/Portfolio",
+            link: "/portfolio",
             // subMenu: [{ link: "", title: "sup", subSubMenu: [{ link: "", title: "yaya" }] }]
 
           },

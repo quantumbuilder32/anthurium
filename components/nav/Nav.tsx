@@ -25,7 +25,9 @@ type subSubMenuItem = {
 export default function MainNav({ menuInfoArr }: { menuInfoArr: menuItem[] }) {
     return (
         <nav className={styles.mainNav}>
-            <div style={{ fontSize: "clamp(1rem, 2.5vw,3rem)" }}><p>Anthur<span style={{ color: "var(--primaryColor)" }}>ium</span></p></div>
+            <div style={{ fontSize: "clamp(1rem, 2.5vw,3rem)" }}>
+                <Link style={{ cursor: "pointer" }} href={"/"}>Anthur<span style={{ color: "var(--primaryColor)" }}>ium</span></Link>
+            </div>
             {/* <Image height={100} width={100} alt='logo' src={require("@/public/logo1.png").default.src} style={{ objectFit: "contain" }} /> */}
 
             <DesktopNav menuInfoArr={menuInfoArr} />
@@ -88,12 +90,14 @@ function MobileNav({ menuInfoArr }: { menuInfoArr: menuItem[] }) {
 
     return (
         <div className={styles.mobileMenu}>
-            <svg onClick={() => showingMenuSet(prev => !prev)} style={{ margin: "0 auto", width: "2rem" }} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M0 96C0 78.3 14.3 64 32 64H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32s14.3-32 32-32H416c17.7 0 32 14.3 32 32z" /></svg>
+            <div style={{ margin: "0 auto", cursor: "pointer" }} onClick={() => showingMenuSet(prev => !prev)} >
+                <svg style={{ width: "2rem" }} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M0 96C0 78.3 14.3 64 32 64H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32s14.3-32 32-32H416c17.7 0 32 14.3 32 32z" /></svg>
+            </div>
 
             {showingMenu && (
                 <ul className={`${styles.mainMenu} noScrollBar`}>
                     {menuInfoArr.map((eachMenuItem, eachMenuItemIndex) => (
-                        <MenuItem key={eachMenuItemIndex} seenMenuItem={eachMenuItem} seenSubMenuArr={eachMenuItem.subMenu} />
+                        <MenuItem key={eachMenuItemIndex} seenMenuItem={eachMenuItem} seenSubMenuArr={eachMenuItem.subMenu} showingMenuSet={showingMenuSet} />
                     ))}
                 </ul>
             )}
@@ -101,7 +105,7 @@ function MobileNav({ menuInfoArr }: { menuInfoArr: menuItem[] }) {
     )
 }
 
-function MenuItem({ seenMenuItem, seenSubMenuArr }: { seenMenuItem: menuItem, seenSubMenuArr: subMenuItem[] | undefined }) {
+function MenuItem({ seenMenuItem, seenSubMenuArr, showingMenuSet }: { seenMenuItem: menuItem, seenSubMenuArr: subMenuItem[] | undefined, showingMenuSet: React.Dispatch<React.SetStateAction<boolean>> }) {
     const [showingSubMenu, showingSubMenuSet] = useState(false)
     const pathname = usePathname()
 
@@ -109,7 +113,7 @@ function MenuItem({ seenMenuItem, seenSubMenuArr }: { seenMenuItem: menuItem, se
     return (
         <li className={styles.mainMenuItem} onClick={(e) => { e.stopPropagation(); showingSubMenuSet(prev => !prev) }} >
             <div style={{ display: "flex", alignItems: "center", gap: ".3rem", justifyContent: "space-between" }}>
-                <Link style={{ color: pathname === seenMenuItem.link ? "var(--primaryColor)" : "" }} href={seenMenuItem.link}>{seenMenuItem.title}</Link>
+                <Link onClick={() => { showingMenuSet(false) }} style={{ color: pathname === seenMenuItem.link ? "var(--primaryColor)" : "" }} href={seenMenuItem.link}>{seenMenuItem.title}</Link>
 
                 {seenSubMenuArr !== undefined && (
                     <svg style={{ width: ".7rem", fill: pathname === seenMenuItem.link ? "var(--primaryColor)" : "", rotate: showingSubMenu ? "180deg" : "" }} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M233.4 406.6c12.5 12.5 32.8 12.5 45.3 0l192-192c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L256 338.7 86.6 169.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l192 192z" /></svg>
@@ -118,21 +122,21 @@ function MenuItem({ seenMenuItem, seenSubMenuArr }: { seenMenuItem: menuItem, se
 
             {showingSubMenu && seenSubMenuArr !== undefined && (
                 <ul className={styles.subMenu}>
-                    {seenSubMenuArr.map((eachSubMenuItem, eachSubMenuItemIndex) => <SubMenuItem key={eachSubMenuItemIndex} seenSubMenuItem={eachSubMenuItem} seenSubSubMenuArr={eachSubMenuItem.subSubMenu} />)}
+                    {seenSubMenuArr.map((eachSubMenuItem, eachSubMenuItemIndex) => <SubMenuItem key={eachSubMenuItemIndex} seenSubMenuItem={eachSubMenuItem} seenSubSubMenuArr={eachSubMenuItem.subSubMenu} showingMenuSet={showingMenuSet} />)}
                 </ul>
             )}
         </li>
     )
 }
 
-function SubMenuItem({ seenSubMenuItem, seenSubSubMenuArr }: { seenSubMenuItem: subMenuItem, seenSubSubMenuArr: subSubMenuItem[] | undefined }) {
+function SubMenuItem({ seenSubMenuItem, seenSubSubMenuArr, showingMenuSet }: { seenSubMenuItem: subMenuItem, seenSubSubMenuArr: subSubMenuItem[] | undefined, showingMenuSet: React.Dispatch<React.SetStateAction<boolean>> }) {
     const [showingSubSubMenu, showingSubSubMenuSet] = useState(false)
     const pathname = usePathname()
 
     return (
         <li className={styles.subMenuItem} onClick={(e) => { e.stopPropagation(); showingSubSubMenuSet(prev => !prev) }}>
             <div style={{ display: "flex", alignItems: "center", gap: ".3rem", justifyContent: "space-between" }}>
-                <Link style={{ color: pathname === seenSubMenuItem.link ? "var(--primaryColor)" : "" }} href={seenSubMenuItem.link}>{seenSubMenuItem.title}</Link>
+                <Link onClick={() => { showingMenuSet(false) }} style={{ color: pathname === seenSubMenuItem.link ? "var(--primaryColor)" : "" }} href={seenSubMenuItem.link}>{seenSubMenuItem.title}</Link>
 
                 {seenSubSubMenuArr !== undefined && (
                     <svg style={{ width: ".7rem", color: pathname === seenSubMenuItem.link ? "var(--primaryColor)" : "", rotate: showingSubSubMenu ? "180deg" : "" }} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M233.4 406.6c12.5 12.5 32.8 12.5 45.3 0l192-192c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L256 338.7 86.6 169.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l192 192z" /></svg>
