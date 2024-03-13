@@ -50,6 +50,22 @@ export default function ReusableLayouts() {
                     )
                 })}
             </div>
+
+
+
+            <h1>Grid minmax resize</h1>
+            <div style={{ display: "grid", gap: "1rem", gridTemplateColumns: "repeat(auto-fit, minmax(min(200px, 100%), 1fr))" }}>
+                {[
+                    {
+                        image: "",
+                    },
+                ].map((each, eachIndex) => {
+                    return (
+                        <div key={eachIndex} style={{ display: "grid", gap: "1rem", alignContent: "flex-start" }}>
+                        </div>
+                    )
+                })}
+            </div>
         </>
     )
 }

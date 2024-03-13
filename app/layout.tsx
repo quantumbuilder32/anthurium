@@ -5,6 +5,7 @@ import Nav from "@/components/nav/Nav";
 import TopSection from "@/components/topSection/TopSection";
 import { servicesData } from "@/lib/servicesData";
 import { Toaster } from "react-hot-toast";
+import Footer from "@/components/footer/Footer";
 
 const rubik = Rubik({ subsets: ["latin"] });
 
@@ -75,6 +76,7 @@ export default function RootLayout({
         ]}
         />
         {children}
+        <Footer />
       </body>
     </html>
   );

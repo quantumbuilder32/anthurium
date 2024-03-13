@@ -4,6 +4,7 @@ import styles from "./nav.module.css"
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import Image from 'next/image'
+import Logo from "@/components/logo/Logo"
 
 type menuItem = {
     title: string,
@@ -25,9 +26,7 @@ type subSubMenuItem = {
 export default function MainNav({ menuInfoArr }: { menuInfoArr: menuItem[] }) {
     return (
         <nav className={styles.mainNav}>
-            <div style={{ fontSize: "clamp(1rem, 2.5vw,3rem)" }}>
-                <Link style={{ cursor: "pointer" }} href={"/"}>Anthur<span style={{ color: "var(--primaryColor)" }}>ium</span></Link>
-            </div>
+            <Logo />
             {/* <Image height={100} width={100} alt='logo' src={require("@/public/logo1.png").default.src} style={{ objectFit: "contain" }} /> */}
 
             <DesktopNav menuInfoArr={menuInfoArr} />
