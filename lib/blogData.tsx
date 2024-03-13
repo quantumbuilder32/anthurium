@@ -16,7 +16,7 @@ export const blogData: BlogDataType[] = [
         title: "The Importance of UX Design in Website Development",
         brief: "Discover why user experience (UX) design is crucial for creating successful websites and how it impacts user engagement and conversion rates.",
         slug: "importance-of-ux-design",
-        component: <div><p>In this blog post, we delve into the significance of user experience (UX) design in website development. You'll learn why a user-centric approach is essential for creating successful websites and how it influences factors such as user engagement and conversion rates.</p></div>
+        component: <div><p>In this blog post, we delve into the significance of user experience (UX) design in website development. You&apos;ll learn why a user-centric approach is essential for creating successful websites and how it influences factors such as user engagement and conversion rates.</p></div>
 
     },
     {
@@ -35,7 +35,7 @@ export const blogData: BlogDataType[] = [
         title: "The Advantages of Responsive Web Design",
         brief: "Explore the benefits of responsive web design and why it's essential for providing an optimal user experience across various devices and screen sizes.",
         slug: "advantages-of-responsive-design",
-        component: <div><p>In this blog post, we highlight the advantages of responsive web design. You'll discover why designing websites with responsiveness in mind is crucial for ensuring an optimal user experience across different devices and screen sizes.</p></div>
+        component: <div><p>In this blog post, we highlight the advantages of responsive web design. You&apos;ll discover why designing websites with responsiveness in mind is crucial for ensuring an optimal user experience across different devices and screen sizes.</p></div>
     },
     {
         category: "SEO",
@@ -44,7 +44,7 @@ export const blogData: BlogDataType[] = [
         title: "Optimizing Your Website for Search Engines",
         brief: "Discover effective strategies for optimizing your website's content, structure, and performance to improve search engine rankings and visibility.",
         slug: "optimizing-for-seo",
-        component: <div><p>This blog post provides insights into optimizing your website for search engines. We discuss various strategies and best practices to improve your site's visibility and rankings on search engine results pages.</p></div>
+        component: <div><p>This blog post provides insights into optimizing your website for search engines. We discuss various strategies and best practices to improve your site&apos;s visibility and rankings on search engine results pages.</p></div>
 
     },
     {

@@ -7,7 +7,9 @@ export default function Page({ params }: { params: { serviceLink: string } }) {
 
     return (
         <main>
-
+            <section>
+                <h1>{foundService.name}</h1>
+            </section>
         </main>
     )
 }
