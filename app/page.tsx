@@ -1,3 +1,5 @@
+import ContactForm from '@/components/contactForm/ContactForm'
+import HowItWorks from '@/components/howItWorks/HowItWorks'
 import ImageCarousel from '@/components/imageCarousel/ImageCarousel'
 import ThirdButton from '@/components/thirdButton/ThirdButton'
 import { servicesData } from '@/lib/servicesData'
@@ -162,6 +164,69 @@ export default function Home() {
             )
           })}
         </div>
+      </section>
+
+      <section style={{ backgroundColor: "var(--backgroundColor)", color: "#fff", paddingBlock: "5rem" }}>
+        <div style={{ display: "flex", flexWrap: "wrap", gap: "1rem", alignItems: 'center' }}>
+          <div style={{ flex: "1 1 300px" }}>
+            <Image alt={`reasons to choose us image`} src="https://images.pexels.com/photos/3184423/pexels-photo-3184423.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" height={1000} width={1000} style={{ objectFit: "cover", height: '100%', maxHeight: "80vh" }} />
+          </div>
+
+          <div style={{ flex: "2 1 300px", display: "grid", alignContent: "flex-start", gap: "1rem" }}>
+            <p className='supportingTitle2'>Why choose Us</p>
+            <h1>Reasons To <span className='highlight'>Choose</span> Anthurium</h1>
+
+            <p>We make your life easier, streamline the development process and build excellent web applications.</p>
+
+            {[
+              {
+                title: "Tailored Solutions",
+                text: "We believe in crafting solutions tailored to your unique needs. Our team takes the time to understand your business objectives, challenges, and vision.",
+                svg: <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M352 320c88.4 0 160-71.6 160-160c0-15.3-2.2-30.1-6.2-44.2c-3.1-10.8-16.4-13.2-24.3-5.3l-76.8 76.8c-3 3-7.1 4.7-11.3 4.7H336c-8.8 0-16-7.2-16-16V118.6c0-4.2 1.7-8.3 4.7-11.3l76.8-76.8c7.9-7.9 5.4-21.2-5.3-24.3C382.1 2.2 367.3 0 352 0C263.6 0 192 71.6 192 160c0 19.1 3.4 37.5 9.5 54.5L19.9 396.1C7.2 408.8 0 426.1 0 444.1C0 481.6 30.4 512 67.9 512c18 0 35.3-7.2 48-19.9L297.5 310.5c17 6.2 35.4 9.5 54.5 9.5zM80 408a24 24 0 1 1 0 48 24 24 0 1 1 0-48z" /></svg>
+              },
+              {
+                title: "Streamlined Process",
+                text: "Our streamlined development process ensures efficiency and transparency every step of the way.",
+                svg: <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M313.4 32.9c26 5.2 42.9 30.5 37.7 56.5l-2.3 11.4c-5.3 26.7-15.1 52.1-28.8 75.2H464c26.5 0 48 21.5 48 48c0 18.5-10.5 34.6-25.9 42.6C497 275.4 504 288.9 504 304c0 23.4-16.8 42.9-38.9 47.1c4.4 7.3 6.9 15.8 6.9 24.9c0 21.3-13.9 39.4-33.1 45.6c.7 3.3 1.1 6.8 1.1 10.4c0 26.5-21.5 48-48 48H294.5c-19 0-37.5-5.6-53.3-16.1l-38.5-25.7C176 420.4 160 390.4 160 358.3V320 272 247.1c0-29.2 13.3-56.7 36-75l7.4-5.9c26.5-21.2 44.6-51 51.2-84.2l2.3-11.4c5.2-26 30.5-42.9 56.5-37.7zM32 192H96c17.7 0 32 14.3 32 32V448c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32V224c0-17.7 14.3-32 32-32z" /></svg>
+              },
+              {
+                title: "Commitment to Excellence",
+                text: "Excellence is at the core of everything we do. We strive for perfection in every line of code, every design element, and every user interaction.",
+                svg: <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M4.1 38.2C1.4 34.2 0 29.4 0 24.6C0 11 11 0 24.6 0H133.9c11.2 0 21.7 5.9 27.4 15.5l68.5 114.1c-48.2 6.1-91.3 28.6-123.4 61.9L4.1 38.2zm503.7 0L405.6 191.5c-32.1-33.3-75.2-55.8-123.4-61.9L350.7 15.5C356.5 5.9 366.9 0 378.1 0H487.4C501 0 512 11 512 24.6c0 4.8-1.4 9.6-4.1 13.6zM80 336a176 176 0 1 1 352 0A176 176 0 1 1 80 336zm184.4-94.9c-3.4-7-13.3-7-16.8 0l-22.4 45.4c-1.4 2.8-4 4.7-7 5.1L168 298.9c-7.7 1.1-10.7 10.5-5.2 16l36.3 35.4c2.2 2.2 3.2 5.2 2.7 8.3l-8.6 49.9c-1.3 7.6 6.7 13.5 13.6 9.9l44.8-23.6c2.7-1.4 6-1.4 8.7 0l44.8 23.6c6.9 3.6 14.9-2.2 13.6-9.9l-8.6-49.9c-.5-3 .5-6.1 2.7-8.3l36.3-35.4c5.6-5.4 2.5-14.8-5.2-16l-50.1-7.3c-3-.4-5.7-2.4-7-5.1l-22.4-45.4z" /></svg>
+              },
+            ].map((eachItem, eachItemIndex) => {
+              return (
+                <div key={eachItemIndex} style={{ display: "flex", gap: "1rem" }}>
+                  <div className='resizeSvg' style={{ width: "3rem", fill: "var(--primaryColor)" }}>
+                    {eachItem.svg}
+                  </div>
+
+                  <div style={{ flex: "1 1 300px", display: "grid", gap: "1rem" }}>
+                    <h3>{eachItem.title}</h3>
+
+                    <p style={{ color: "var(--fadedWhite)" }}>{eachItem.text}</p>
+                  </div>
+                </div>
+              )
+            })}
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <div style={{ display: "flex", flexWrap: "wrap", gap: "1rem", maxWidth: "1000px", margin: "0 auto" }}>
+          <div style={{ flex: "1 1 400px" }}>
+            <Image alt={`${1}'s image`} src="https://images.unsplash.com/photo-1535953472862-9cc610a70f8a?q=80&w=1780&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" height={600} width={600} style={{ objectFit: "cover", maxHeight: "90vh" }} />
+          </div>
+
+          <div style={{ flex: "2 1 400px", display: "grid", alignContent: "flex-start", gap: "1rem" }}>
+            <ContactForm />
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <HowItWorks />
       </section>
     </main>
   )

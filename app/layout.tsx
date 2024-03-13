@@ -4,6 +4,7 @@ import "./globals.css";
 import Nav from "@/components/nav/Nav";
 import TopSection from "@/components/topSection/TopSection";
 import { servicesData } from "@/lib/servicesData";
+import { Toaster } from "react-hot-toast";
 
 const rubik = Rubik({ subsets: ["latin"] });
 
@@ -21,6 +22,11 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={rubik.className}>
+        <Toaster
+          position="top-center"
+          reverseOrder={false}
+        />
+
         <TopSection />
 
         <Nav menuInfoArr={[
