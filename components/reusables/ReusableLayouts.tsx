@@ -4,6 +4,12 @@ import React from 'react'
 export default function ReusableLayouts() {
     return (
         <>
+            <h1>Image Starter</h1>
+            <Image alt={`${1}'s image`} src={require(`@/public`).default.src} height={400} width={400} style={{ objectFit: "cover" }} />
+
+
+
+
             <h1>2 Column Layout</h1>
             <div style={{ display: "flex", flexWrap: "wrap", gap: "1rem" }}>
                 <div style={{ flex: "1 1 400px" }}>
@@ -30,9 +36,20 @@ export default function ReusableLayouts() {
 
 
 
-            <h1>Image Starter</h1>
-            <Image alt={`${1}'s image`} src={require(`@/public`).default.src} height={400} width={400} style={{ objectFit: "cover" }} />
 
+            <h1>Grid Column Scroll</h1>
+            <div className='snap' style={{ overflowX: "auto", display: "grid", gap: "1rem", gridAutoFlow: "column", gridAutoColumns: "min(400px, 100%)" }}>
+                {[
+                    {
+                        image: "",
+                    },
+                ].map((each, eachIndex) => {
+                    return (
+                        <div key={eachIndex} style={{ display: "grid", gap: "1rem", alignContent: "flex-start" }}>
+                        </div>
+                    )
+                })}
+            </div>
         </>
     )
 }

@@ -10,10 +10,12 @@
     --tertiaryColor: #952e2e;
     --backgroundColor: #252628;
     --fadedWhite: #ddd;
+    --fadedTextColor: #111;
 
 
     --largeFontSize: 2rem;
     --mediumFontSize: 1.3rem;
+    --smallFontSize: .7rem;
 }
 
 
@@ -176,9 +178,18 @@ section {
 
 
 .highlight {
-    color: var(--primaryColor)
+    color: var(--primaryColor);
+    fill: var(--primaryColor);
 }
 
+.hoverHighlight:hover {
+    transition: color 400ms, fill 400ms;
+}
+
+.hoverHighlight:hover {
+    color: var(--primaryColor);
+    fill: var(--primaryColor);
+}
 
 .noDisplay {
     display: none;
