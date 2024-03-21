@@ -28,8 +28,6 @@ export default function RootLayout({
           reverseOrder={false}
         />
 
-        <TopSection />
-
         <Nav menuInfoArr={[
           {
             title: "Home",
@@ -76,6 +74,8 @@ export default function RootLayout({
         ]}
         />
         {children}
+        <TopSection />
+
         <Footer />
       </body>
     </html>

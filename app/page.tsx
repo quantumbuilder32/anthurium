@@ -88,11 +88,19 @@ export default function Home() {
           </div>
 
           <div style={{ flex: "1 1 400px", display: "grid", alignContent: "flex-start", gap: "1rem" }}>
-            <p className='supportingTitle2'>About Company</p>
+            <p className='supportingTitle2'>About Us</p>
 
-            <h1>We Deal With The Aspects Of Professional <span className='highlight'>Web Development Services</span></h1>
+            {/* <h1>We Deal With The Aspects Of Professional <span className='highlight'>Web Development Services</span></h1> */}
 
-            <p>At Anthurium, we&apos;re passionate about crafting exceptional digital experiences through our expertise in website development and mobile app solutions. As a trusted partner, we cater to the diverse needs of businesses worldwide, helping them thrive in the digital age with bespoke software solutions.</p>
+            <h1>Elevate your operations with our premium solutions, designed for <span className='highlight'>innovation</span> and sustainable  <span className='highlight'>growth</span>.</h1>
+
+            {/* <p>At Anthurium, we&apos;re passionate about crafting exceptional digital experiences through our expertise in website development and mobile app solutions. As a trusted partner, we cater to the diverse needs of businesses worldwide, helping them thrive in the digital age with bespoke software solutions.</p> */}
+
+            <p>We provide end-to-end software solutions tailored to meet your unique needs. Our services encompass careful planning, development, testing, and ongoing support.</p>
+
+            <p>Whether you require scalable applications, intuitive user interfaces, or robust backend systems, we deliver efficient and future-ready software. </p>
+
+            <p>From concept to deployment, our team ensures a seamless process, emphasizing quality, security, and a user-centric approach.</p>
 
             <div className='snap' style={{ overflowX: "auto", display: "grid", gap: "1rem", gridAutoFlow: "column", gridTemplateRows: "1fr 1fr", gridAutoColumns: "100%" }}>
               {[

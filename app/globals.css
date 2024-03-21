@@ -249,15 +249,8 @@ section {
 
 .supportingTitle2 {
     text-transform: uppercase;
-    position: relative;
     color: var(--primaryColor);
     font-weight: bold;
-    display: flex;
-    gap: .5rem;
-}
-
-.supportingTitle2::before {
-    content: "//";
 }
 
 .snap {
