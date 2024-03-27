@@ -74,7 +74,7 @@ export default function RootLayout({
         ]}
         />
         {children}
-        <TopSection />
+        {/* <TopSection /> */}
 
         <Footer />
       </body>

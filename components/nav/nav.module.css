@@ -190,4 +190,10 @@
     .subSubMenuItem {
         padding: 1rem;
     }
+
+
+    .navButton {
+        font-size: .7rem;
+        padding: .5rem 1rem !important;
+    }
 }

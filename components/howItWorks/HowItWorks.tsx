@@ -18,7 +18,7 @@ export default function HowItWorks() {
                         },
                         {
                             title: "Consultation",
-                            text: "We'll schedule a consultation to understand your business, and vision for your website.",
+                            text: "We'll schedule a consultation to understand your business, and vision for your project.",
                             img: "https://cdn.pixabay.com/photo/2018/03/10/12/00/teamwork-3213924_1280.jpg"
                         },
                         {

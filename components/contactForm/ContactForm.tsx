@@ -123,8 +123,7 @@ export default function ContactForm() {
             <div style={{ textAlign: "center", display: "grid", gap: "1rem", marginBottom: "2rem" }}>
                 <h1>Request Free Consultation</h1>
 
-                <p>Get in touch and discover how we can help. We aim to be in touch for a consultation</p>
-
+                <p>Get in touch and discover how we can help. We will be in touch with you as soon as possible.</p>
             </div>
             <div className={styles.formColCont} style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(min(300px, 100%), 1fr))", gap: "1rem" }}>
                 <div>

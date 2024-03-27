@@ -90,17 +90,13 @@ export default function Home() {
           <div style={{ flex: "1 1 400px", display: "grid", alignContent: "flex-start", gap: "1rem" }}>
             <p className='supportingTitle2'>About Us</p>
 
-            {/* <h1>We Deal With The Aspects Of Professional <span className='highlight'>Web Development Services</span></h1> */}
+            <h1>Elevate your operations with our premium solutions</h1>
 
-            <h1>Elevate your operations with our premium solutions, designed for <span className='highlight'>innovation</span> and sustainable  <span className='highlight'>growth</span>.</h1>
-
-            {/* <p>At Anthurium, we&apos;re passionate about crafting exceptional digital experiences through our expertise in website development and mobile app solutions. As a trusted partner, we cater to the diverse needs of businesses worldwide, helping them thrive in the digital age with bespoke software solutions.</p> */}
+            <p>From concept to deployment, our team ensures a seamless process, emphasizing quality, security, and a user-centric approach.</p>
 
             <p>We provide end-to-end software solutions tailored to meet your unique needs. Our services encompass careful planning, development, testing, and ongoing support.</p>
 
             <p>Whether you require scalable applications, intuitive user interfaces, or robust backend systems, we deliver efficient and future-ready software. </p>
-
-            <p>From concept to deployment, our team ensures a seamless process, emphasizing quality, security, and a user-centric approach.</p>
 
             <div className='snap' style={{ overflowX: "auto", display: "grid", gap: "1rem", gridAutoFlow: "column", gridTemplateRows: "1fr 1fr", gridAutoColumns: "100%" }}>
               {[
@@ -136,7 +132,7 @@ export default function Home() {
                       {eachItem.icon}
                     </div>
 
-                    <div style={{ flex: "1 1 300px", display: "grid", gap: "1rem" }}>
+                    <div style={{ flex: "1 1 300px", display: "grid", gap: ".5rem", alignContent: "flex-start" }}>
                       <h3>{eachItem.title}</h3>
 
                       <p>{eachItem.summary}</p>
@@ -151,12 +147,12 @@ export default function Home() {
 
       <section style={{ backgroundColor: "var(--secondaryColor)" }}>
         <div style={{ display: "flex", flexWrap: "wrap", gap: "1rem", justifyContent: "center", alignItems: "center" }}>
-          <div>
+          <div style={{ flex: "1 1 300px" }}>
             <p className='supportingTitle2'>our services</p>
             <h1>What We Provide</h1>
           </div>
 
-          <div style={{ display: "grid", alignContent: "flex-start", gap: "1rem", }}>
+          <div style={{ flex: "4 1 300px", display: "grid", alignContent: "flex-start", gap: "1rem", }}>
             <p style={{ maxWidth: "75ch" }}>At Anthurium we specialize in delivering cutting-edge digital solutions tailored to your business needs. From innovative website development to seamless mobile app solutions, we offer a comprehensive suite of services designed to elevate your online presence.</p>
           </div>
         </div>
@@ -185,10 +181,12 @@ export default function Home() {
           </div>
 
           <div style={{ flex: "2 1 300px", display: "grid", alignContent: "flex-start", gap: "1rem" }}>
-            <p className='supportingTitle2'>Why choose Us</p>
             <h1>Reasons To <span className='highlight'>Choose</span> Anthurium</h1>
 
             <p>We make your life easier, streamline the development process and build excellent web applications.</p>
+
+            <p className='supportingTitle2'>Why choose Us</p>
+
 
             {[
               {

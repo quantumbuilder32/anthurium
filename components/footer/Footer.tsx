@@ -9,7 +9,7 @@ import styles from "./page.module.css"
 
 export default function Footer() {
     return (
-        <footer style={{ padding: "3rem 1rem", backgroundColor: "var(--backgroundColor)", color: "#fff", display: "grid", gap: "1rem" }}>
+        <footer style={{ padding: "2rem 1rem", backgroundColor: "var(--backgroundColor)", color: "#fff", display: "grid", gap: "1rem" }}>
             <div className={styles.listCont} style={{ display: "grid", gap: "1rem", gridTemplateColumns: "repeat(auto-fit, minmax(min(200px, 100%), 1fr))" }}>
                 <div style={{ display: "grid", gap: "1rem", alignContent: 'flex-start' }}>
                     <Logo />
@@ -29,7 +29,7 @@ export default function Footer() {
                     </div>
                 </div>
 
-                <div>
+                {/* <div>
                     <h2>Recent Posts</h2>
 
                     <div style={{ display: "grid", gap: "1rem", }}>
@@ -52,7 +52,7 @@ export default function Footer() {
                             )
                         })}
                     </div>
-                </div>
+                </div> */}
             </div>
 
             <div style={{ padding: "1rem", marginTop: "1rem", borderTop: "1px solid var(--fadedWhite2)", display: "flex", flexWrap: "wrap", justifyContent: "space-between", gap: "1rem" }}>

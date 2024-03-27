@@ -26,13 +26,15 @@ type subSubMenuItem = {
 export default function MainNav({ menuInfoArr }: { menuInfoArr: menuItem[] }) {
     return (
         <nav className={styles.mainNav}>
+            <MobileNav menuInfoArr={menuInfoArr} />
+
+
             <Logo />
             {/* <Image height={100} width={100} alt='logo' src={require("@/public/logo1.png").default.src} style={{ objectFit: "contain" }} /> */}
 
             <DesktopNav menuInfoArr={menuInfoArr} />
-            <MobileNav menuInfoArr={menuInfoArr} />
 
-            <button className='mainButton'>Get Started</button>
+            <button className={`mainButton ${styles.navButton}`}>Get Started</button>
         </nav>
     )
 }
